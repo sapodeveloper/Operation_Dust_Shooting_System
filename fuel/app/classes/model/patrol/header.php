@@ -41,6 +41,13 @@ class Model_Patrol_Header extends \Orm\Model
 	);
 
 	protected static $_has_many = array(
+		'records' => array(
+			'model_to' => 'Model_Patrol_Record',
+			'key_from' => 'id',
+			'key_to' => 'header_id',
+			'cascade_save' => true,
+			'cascade_delete' => false
+		),
 		'reports' => array(
 			'model_to' => 'Model_Patrol_Report',
 			'key_from' => 'id',
