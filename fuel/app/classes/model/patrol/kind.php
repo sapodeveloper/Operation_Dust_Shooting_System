@@ -22,4 +22,14 @@ class Model_Patrol_Kind extends \Orm\Model
 	);
 	protected static $_table_name = 'patrol_kinds';
 
+	protected static $_has_many = array(
+		'records' => array(
+			'model_to' => 'Model_Patrol_Record',
+			'key_from' => 'id',
+			'key_to' => 'kind_id',
+			'cascade_save' => true,
+			'cascade_delete' => false
+		),
+	);
+
 }
