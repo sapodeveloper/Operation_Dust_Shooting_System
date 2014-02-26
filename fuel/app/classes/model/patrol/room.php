@@ -22,4 +22,14 @@ class Model_Patrol_Room extends \Orm\Model
 	);
 	protected static $_table_name = 'patrol_rooms';
 
+	protected static $_has_many = array(
+		'headers' => array(
+			'model_to' => 'Model_Patrol_Header',
+			'key_from' => 'id',
+			'key_to' => 'room_id',
+			'cascade_save' => true,
+			'cascade_delete' => false
+		),
+	);
+
 }
