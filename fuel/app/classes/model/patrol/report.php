@@ -23,4 +23,14 @@ class Model_Patrol_Report extends \Orm\Model
 	);
 	protected static $_table_name = 'patrol_reports';
 
+	protected static $_has_many = array(
+		'headers' => array(
+			'model_to' => 'Model_Patrol_Header',
+			'key_from' => 'header_id',
+			'key_to' => 'id',
+			'cascade_save' => true,
+			'cascade_delete' => false
+		),
+	);
+
 }
