@@ -6,7 +6,7 @@ require 'rspec'
 Capybara.configure do |config|
   config.app = "Operation Dust Shooting System"
   config.default_driver = :mechanize
-  config.app_host       = 'localhost'
+  config.app_host       = 'http://localhost/odss'
 end
 
 Before do
