@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja" >
+	
+	<head>
+		<meta charset="utf-8">
+			<title>見回り集計システム</title>
+			<link rel="stylesheet" href="../css/uikit.gradient.css">
+			<link rel="stylesheet" href="../css/font-awesome.css">
+			<link rel="stylesheet" href="../css/base/jquery.ui.all.css">
+			<script src="../js/jquery.js"></script>
+			<script src="../js/uikit.js"></script>		
+			<script src="../js/ui/jquery-ui.js"></script>		
+			<script src="../js/ui/i18n/jquery.ui.datepicker-ja.js"></script>	
+			<script src="../js/jquery.tooltipster.js"></script>	
+			<script>
+				<!--
+				jQuery( function() {
+				    jQuery( '#jquery-ui-datepicker' ) . datepicker();
+				} );
+				// -->
+			</script>
+	</head>
+	<body class="tm-background">
+
+	<!-- Navigation Bar-->
+	<nav  id="top" class="tm-navbar uk-navbar uk-navbar-attached">
+		<a href="00_Login.html" class="uk-navbar-brand"><i class="fa fa-calendar"></i>&nbsp;見回り集計システム</a>
+		<div class="uk-navbar-flip">			
+			<ul class="uk-navbar-nav">
+				<div class="uk-navbar-content uk-hidden-small">
+					<i class="fa fa-user"></i>&nbsp;サポセンスタッフ&nbsp;
+                    <a href="00_Login.html">
+					    <button class="uk-button uk-button-danger" type="submit">
+					       ログアウト&nbsp;<i class="fa fa-sign-out"></i>
+					    </button>
+                    </a>
+				</div>
+			</ul>
+		</div>
+	</nav>
+	<br>
+	
+	<!-- Contents -->
+	<div class="uk-grid" data-uk-grid-margin>
+		<div class="tm-main uk-width-medium-1-1">
+			<div class="uk-grid">
+				<div class="uk-width-medium-1-10">&nbsp;</div>
+				<div class="uk-width-medium-8-10">
+					<article class="uk-articleuk-panel uk-panel-box">
+						<center><h1 class="uk-article-title">DataInput（データ入力）</h1></center>
+						<div class="uk-grid">
+							<div class="uk-width-medium-2-10">&nbsp;</div>
+							<div class="uk-width-medium-7-10">
+								<h1 class="uk-article-title">PC1</h1>
+                                <form class="uk-form uk-text-right">
+                                    <fieldset>
+                                        <select>
+                                            <option>作業者</option>
+                                            <option>豊嶋</option>
+                                            <option>大盛</option>
+                                            <option>カレーうどん！</option>
+                                        </select>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </fieldset>
+                                </form>
+                                <br>
+								<table border="1" width=80% class="uk-text-left">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="uk-text-center">紙ゴミ</div>
+                                                <br>&nbsp;</br>
+                                                <form class="uk-form uk-width-medium-1-1">
+                                                    <fieldset>
+                                                        <div class="uk-form-row">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <div class="uk-button-group" data-uk-button-radio>
+                                                                <button type="button" class="uk-button uk-button-primary">なし</button>
+                                                                <button type="button" class="uk-button uk-button-primary">あり</button>
+                                                            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            個数&nbsp;
+                                                            <select>
+                                                                <option>0</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                                <option>5</option>
+                                                                <option>6</option>
+                                                                <option>7</option>
+                                                                <option>8</option>
+                                                                <option>9</option>
+                                                                <option>10</option>
+                                                                <option>11以上</option>
+                                                            </select>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                                <br>&nbsp;</br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="uk-text-center">菓子ゴミ</div>
+                                                <br>&nbsp;</br>
+                                                <form class="uk-form uk-width-medium-1-1">
+                                                    <fieldset>
+                                                        <div class="uk-form-row">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <div class="uk-button-group" data-uk-button-radio>
+                                                                <button type="button" class="uk-button uk-button-primary">なし</button>
+                                                                <button type="button" class="uk-button uk-button-primary">あり</button>
+                                                            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            個数&nbsp;
+                                                            <select>
+                                                                <option>0</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                                <option>5</option>
+                                                                <option>6</option>
+                                                                <option>7</option>
+                                                                <option>8</option>
+                                                                <option>9</option>
+                                                                <option>10</option>
+                                                                <option>11以上</option>
+                                                            </select>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                                <br>&nbsp;</br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="uk-text-center">ビニールゴミ</div>
+                                                <br>&nbsp;</br>
+                                                <form class="uk-form uk-width-medium-1-1">
+                                                    <fieldset>
+                                                        <div class="uk-form-row">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <div class="uk-button-group" data-uk-button-radio>
+                                                                <button type="button" class="uk-button uk-button-primary">なし</button>
+                                                                <button type="button" class="uk-button uk-button-primary">あり</button>
+                                                            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            個数&nbsp;
+                                                            <select>
+                                                                <option>0</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                                <option>5</option>
+                                                                <option>6</option>
+                                                                <option>7</option>
+                                                                <option>8</option>
+                                                                <option>9</option>
+                                                                <option>10</option>
+                                                                <option>11以上</option>
+                                                            </select>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                                <br>&nbsp;</br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="uk-text-center">ペットボトル</div>
+                                                <br>&nbsp;</br>
+                                                <form class="uk-form uk-width-medium-1-1">
+                                                    <fieldset>
+                                                        <div class="uk-form-row">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <div class="uk-button-group" data-uk-button-radio>
+                                                                <button type="button" class="uk-button uk-button-primary">なし</button>
+                                                                <button type="button" class="uk-button uk-button-primary">あり</button>
+                                                            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            個数&nbsp;
+                                                            <select>
+                                                                <option>0</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                                <option>5</option>
+                                                                <option>6</option>
+                                                                <option>7</option>
+                                                                <option>8</option>
+                                                                <option>9</option>
+                                                                <option>10</option>
+                                                                <option>11以上</option>
+                                                            </select>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                                <br>&nbsp;</br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="uk-text-center">空き缶</div>
+                                                <br>&nbsp;</br>
+                                                <form class="uk-form uk-width-medium-1-1">
+                                                    <fieldset>
+                                                        <div class="uk-form-row">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <div class="uk-button-group" data-uk-button-radio>
+                                                                <button type="button" class="uk-button uk-button-primary">なし</button>
+                                                                <button type="button" class="uk-button uk-button-primary">あり</button>
+                                                            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            個数&nbsp;
+                                                            <select>
+                                                                <option>0</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                                <option>5</option>
+                                                                <option>6</option>
+                                                                <option>7</option>
+                                                                <option>8</option>
+                                                                <option>9</option>
+                                                                <option>10</option>
+                                                                <option>11以上</option>
+                                                            </select>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                                <br>&nbsp;</br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="uk-text-center">その他</div>
+                                                <br>&nbsp;</br>
+                                                <form class="uk-form uk-width-medium-1-1">
+                                                    <fieldset>
+                                                        <div class="uk-form-row">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <div class="uk-button-group" data-uk-button-radio>
+                                                                <button type="button" class="uk-button uk-button-primary">なし</button>
+                                                                <button type="button" class="uk-button uk-button-primary">あり</button>
+                                                            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            個数&nbsp;
+                                                            <select>
+                                                                <option>0</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                                <option>5</option>
+                                                                <option>6</option>
+                                                                <option>7</option>
+                                                                <option>8</option>
+                                                                <option>9</option>
+                                                                <option>10</option>
+                                                                <option>11以上</option>
+                                                            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <form action="#" method="#">
+                                                                <textarea name="kanso" rows="4" cols="40">Text input</textarea>
+                                                            </form>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                                <br>&nbsp;</br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="uk-text-center">メンテナンス</div>
+                                                <br>&nbsp;</br>
+                                                <form class="uk-form uk-width-medium-1-1">
+                                                    <fieldset>
+                                                        <div class="uk-form-row">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <div class="uk-button-group" data-uk-button-radio>
+                                                                <button type="button" class="uk-button uk-button-primary">なし</button>
+                                                                <button type="button" class="uk-button uk-button-primary">あり</button>
+                                                            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            件数&nbsp;
+                                                            <select>
+                                                                <option>0</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                                <option>5</option>
+                                                                <option>6</option>
+                                                                <option>7</option>
+                                                                <option>8</option>
+                                                                <option>9</option>
+                                                                <option>10</option>
+                                                                <option>11以上</option>
+                                                            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <form action="#" method="#">
+                                                                <textarea name="kanso" rows="4" cols="40">Text input</textarea>
+                                                            </form>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                                <br>&nbsp;</br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="uk-text-center">報告</div>
+                                                <br>&nbsp;</br>
+                                                <form class="uk-form uk-width-medium-1-1">
+                                                    <fieldset>
+                                                        <div class="uk-form-row">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <div class="uk-button-group" data-uk-button-radio>
+                                                                <button type="button" class="uk-button uk-button-primary">なし</button>
+                                                                <button type="button" class="uk-button uk-button-primary">あり</button>
+                                                            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            件数&nbsp;
+                                                            <select>
+                                                                <option>0</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                                <option>5</option>
+                                                                <option>6</option>
+                                                                <option>7</option>
+                                                                <option>8</option>
+                                                                <option>9</option>
+                                                                <option>10</option>
+                                                                <option>11以上</option>
+                                                            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <br>
+                                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑&nbsp;「あり」にすると入力完了後、別ページに飛びます。</p>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                                <br>&nbsp;</br>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="uk-width-medium-1-10">
+                                <a href="#bottom" class="uk-button uk-button-success" data-uk-smooth-scroll>↓&nbsp;Down</a>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <a href="#top" class="uk-button uk-button-success" data-uk-smooth-scroll>↑&nbsp;Up</a>
+                            </div>
+                        </div>
+                        <br>
+                            <center>
+                                <a href="04_Report.html">
+                                    <button class="uk-button uk-button-primary uk-button-large">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-pencil-square-o"></i>&nbsp;入力完了&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </button>
+                                </a>
+                            </center>
+					</article>
+				</div>
+			</div>	
+		</div>
+	</div>
+    <div id="bottom">&nbsp;</div>
+	
+	<!-- footer -->
+	<footer>
+		<div style="text-align: center; font-size: small;">
+			<br>
+			<h6>Copyright ©2014 HIT ISMC Support Center All Rights Reserved.</h6>
+		</div>
+	</footer>
+	
+	</body>
+</html>

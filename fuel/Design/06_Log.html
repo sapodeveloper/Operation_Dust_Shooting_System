@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja" >
+	
+	<head>
+		<meta charset="utf-8">
+		<title>見回り集計システム</title>
+		<link rel="stylesheet" href="../css/uikit.gradient.css">
+		<link rel="stylesheet" href="../css/font-awesome.css">
+		<link rel="stylesheet" href="../css/base/jquery.ui.all.css">
+		<script src="../js/jquery.js"></script>
+		<script src="../js/uikit.js"></script>		
+		<script src="../js/ui/jquery-ui.js"></script>		
+		<script src="../js/ui/i18n/jquery.ui.datepicker-ja.js"></script>	
+		<script src="../js/jquery.tooltipster.js"></script>	
+		<script>
+			<!--
+			jQuery( function() {
+			    jQuery( '#jquery-ui-datepicker' ) . datepicker();
+                				} );
+			// -->
+		</script>
+        <style type="text/css">
+            <!--table:hover{font color:#E48E00;}-->
+        </style>
+	</head>
+	<body class="tm-background">
+
+	<!-- Navigation Bar-->
+	<nav class="tm-navbar uk-navbar uk-navbar-attached">
+		<a href="00_Login.html" class="uk-navbar-brand"><i class="fa fa-calendar"></i>&nbsp;見回り集計システム</a>
+		<div class="uk-navbar-flip">			
+			<ul class="uk-navbar-nav">
+				<div class="uk-navbar-content uk-hidden-small">
+					<i class="fa fa-user"></i>&nbsp;サポセンスタッフ&nbsp;
+                    <a href="00_Login.html">
+						<button class="uk-button uk-button-danger" type="submit">
+							ログアウト&nbsp;<i class="fa fa-sign-out"></i>
+						</button>
+                    </a>
+				</div>
+			</ul>
+		</div>
+	</nav>
+	
+	<!-- Padding -->
+	<br>
+	
+	<!-- Contents -->
+	<div class="uk-grid" data-uk-grid-margin>
+		<div class="tm-main uk-width-medium-1-1">
+			<div class="uk-grid">
+				<div class="uk-width-medium-1-10">&nbsp;</div>
+				<div class="uk-width-medium-8-10">
+					<article class="uk-articleuk-panel uk-panel-box">
+                       	<div class="uk-article-title uk-text-center">最新報告一覧（報告）</div>
+                    	<br>
+                    	<CENTER>
+                    	<table border="1" class="uk-table uk-table-hover">
+                            <thead>
+                        	<tr class="uk-text-center">
+                        		<td>状態</td>
+                        		<td>日付</td>
+                        		<td>教室</td>
+                        		<td>担当者</td>
+                        		<td>見出し</td>
+                        		<td>本文</td>
+                                <td>編集</td>
+                        		<td>報告</td>
+                        	</tr>
+                            </thead>
+                            <tbody>
+							<tr class="uk-text-center" height="45">
+                        		<td bgcolor="#BCF5A9">
+                        			<font class="uk-text-success">&nbsp;<i class="fa fa-exclamation-circle"></i>&nbsp;解決済&nbsp;</font>
+                        		</td>
+                        		<td>&nbsp;12/24&nbsp;</td>
+                        		<td>&nbsp;PC1&nbsp;</td>
+                        		<td>&nbsp;豊嶋&nbsp;</td>
+                        		<td>PC1のパソコン炎上！！</td>
+                        		<td>三澤くんの過度な使用によりPC本体が炎上している。</td>
+                                <td><font class="uk-text-danger">不可</font></td>
+                        		<td bgcolor="#BCF5A9"><font class="uk-text-success">済み</font></td>
+                        	</tr>
+							<tr class="uk-text-center" height="45">
+                        		<td bgcolor="#E0FFFF">
+                        			<font class="uk-text-info"><i class="fa fa-exclamation-circle"></i>&nbsp;報告済</font>
+                        		</td>
+                        		<td>12/25</td>
+                        		<td>PC2</td>
+                        		<td>三澤</td>
+                        		<td>PC2のディスプレイが割れてる！！</td>
+                        		<td>私じゃありません！来た時には割れてたんです！！</td>
+                                <td><font class="uk-text-danger">不可</font></td>
+                        		<td bgcolor="#BCF5A9"><font class="uk-text-success">済み</font></td>
+                        	</tr>
+                        	<tr class="uk-text-center" height="45">
+                        		<td bgcolor="#F6CECE">
+                        			<font class="uk-text-danger"><i class="fa fa-exclamation-triangle"></i>&nbsp;未報告</font>
+                        		</td>
+                        		<td>1/1</td>
+                        		<td>-</td>
+                        		<td>豊嶋</td>
+                        		<td>三澤くんmac買う！！</td>
+                        		<td>みなさん、三澤くんがmacerになりましたよ！</td>
+                                <td><a href="04_Report.html"><button class="uk-button uk-button-primary">編集</button></a></td>
+                        		<td><a href="05_Report List.html"><button class="uk-button uk-button-danger">報告</button></a></td>
+                        	</tr>
+                        	<tr class="uk-text-center" height="45">
+                        		<td bgcolor="#F6CECE">
+                        			<font class="uk-text-danger"><i class="fa fa-exclamation-triangle"></i>&nbsp;未報告</font>
+                        		</td>
+                        		<td>1/2</td>
+                        		<td>-</td>
+                        		<td>豊嶋</td>
+                        		<td>三澤くんのmac炎上！！</td>
+                        		<td>三澤くんのhardな使用にはmacでさえ耐えなられなかったのか！</td>
+                                <td><a href="04_Report.html"><button class="uk-button uk-button-primary">編集</button></a></td>
+                        		<td><a href="05_Report List.html"><button class="uk-button uk-button-danger">報告</button></a></td>
+                        	</tr>
+                        	<tr class="uk-text-center" height="45">
+                        		<td bgcolor="#F6CECE">
+                        			<font class="uk-text-danger"><i class="fa fa-exclamation-triangle"></i>&nbsp;未報告</font>
+                        		</td>
+                        		<td>1/3</td>
+                        		<td>-</td>
+                        		<td>豊嶋</td>
+                        		<td>三澤くんmac買う再び！！！</td>
+                        		<td>三澤くんのmacは何度でもよみがえるさ！それが人類の（以下略）</td>
+                                <td><a href="04_Report.html"><button class="uk-button uk-button-primary">編集</button></a></td>
+                        		<td><a href="05_Report List.html"><button class="uk-button uk-button-danger">報告</button></a></td>
+                        	</tr>
+                            </tbody>
+                    	</table>
+                    	</CENTER>
+					</article>
+				</div>
+			</div>	
+		</div>
+	</div>
+	
+	<!-- footer -->
+	<footer>
+		<div style="text-align: center; font-size: small;">
+			<br>
+			<h6>Copyright ©2014 HIT ISMC Support Center All Rights Reserved.</h6>
+		</div>
+	</footer>
+	
+	</body>
+</html>
