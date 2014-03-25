@@ -14,6 +14,12 @@ class Create_rooms
 			'updated_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 
 		), array('id'));
+
+		$rooms = array("PC1", "PC2", "PC3", "CAD1", "CAD2", "MM");
+		reset($rooms);
+		foreach ($rooms as $key => $value) {
+			\DB::insert('rooms')->set(array('room_name' => $value, 'room_condition' => 1))->execute();
+		}
 	}
 
 	public function down()

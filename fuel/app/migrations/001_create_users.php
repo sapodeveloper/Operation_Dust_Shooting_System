@@ -14,6 +14,12 @@ class Create_users
 			'updated_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 
 		), array('id'));
+
+		$users = array("中奥", "王子", "大盛", "三澤", "Edy豊嶋");
+		reset($users);
+		foreach ($users as $key => $value) {
+			\DB::insert('users')->set(array('user_name' => $value, 'user_condition' => 1))->execute();
+		}
 	}
 
 	public function down()
