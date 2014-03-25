@@ -29,4 +29,21 @@ class Model_Record extends \Orm\Model
 	);
 	protected static $_table_name = 'records';
 
+	protected static $_belongs_to = array(
+		'users' => array(
+			'model_to' => 'Model_User',
+			'key_from' => 'user_id',
+			'key_to' => 'id',
+			'cascade_save' => false,
+			'cascade_delete' => false
+		),
+		'rooms' => array(
+			'model_to' => 'Model_Room',
+			'key_from' => 'room_id',
+			'key_to' => 'id',
+			'cascade_save' => false,
+			'cascade_delete' => false
+		),
+	);
+
 }
